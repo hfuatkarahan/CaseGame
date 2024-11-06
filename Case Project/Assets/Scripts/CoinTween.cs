@@ -11,12 +11,10 @@ public class CoinTween : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Boy"))
+        if (other.TryGetComponent<BoyTag>(out BoyTag boyTag))
         {
-            //Vector3 targetPosition = RectTransformUtility.WorldToScreenPoint(Camera.main, uiCoinIcon.rectTransform.position);
             RectTransform uiCoinRect = uiCoinIcon.GetComponent<RectTransform>();
             transform.DOMove(uiCoinRect.position, 10f).SetEase(Ease.InOutQuad);
-            //transform.DOScale(Vector3.zero, 1f).SetEase(Ease.InBack);
 
         }
     }

@@ -7,11 +7,10 @@ public class UIManager : MonoBehaviour
 {
     public GameObject _startPanel;
     private Opponents[] _opponentsArray;
-    public TextMeshProUGUI coinCountText;
+    public TextMeshProUGUI coinCountText, deadCounText;
 
     private void Start()
     {
-        // Sahnedeki tüm Opponents bileþenlerini bul
         _opponentsArray = FindObjectsOfType<Opponents>();
     }
 
@@ -19,7 +18,6 @@ public class UIManager : MonoBehaviour
     {
         _startPanel.SetActive(false);
 
-        // Her bir Opponents bileþeni için AgentStart'ý çaðýr
         foreach (var opponent in _opponentsArray)
         {
             opponent.AgentStart();

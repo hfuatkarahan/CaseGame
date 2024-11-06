@@ -37,11 +37,11 @@ public class Opponents : MonoBehaviour
 
     private void Update()
     {
-        _boy.FallReturn();
-        if (GameManager.Instance.isGameOver)
+        if (GameManager.Instance.isGameOver && _agent.enabled)
         {
             _agent.isStopped = true;
             AnimPlay("idle");
+            OpponentsFallReturn();
         }
     }
 
@@ -73,5 +73,14 @@ public class Opponents : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _agent.enabled = true;
         _agent.SetDestination(target.transform.position);
+    }
+
+    public void OpponentsFallReturn()
+    {
+        if (transform.position.y < -7f)
+        {
+            transform.position = _agentStartPosition;
+            transform.eulerAngles = _agentStartPosition;
+        }
     }
 }

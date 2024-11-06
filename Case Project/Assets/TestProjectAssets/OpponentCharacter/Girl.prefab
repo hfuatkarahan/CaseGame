@@ -295,10 +295,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.77762854
   m_Height: 2.7222254
   m_Direction: 1
-  m_Center: {x: 0, y: 1.310203, z: 0}
+  m_Center: {x: 0, y: 1.310203, z: 0.2}
 --- !u!54 &6767852535428233649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -350,8 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  _agent: {fileID: 8728748423611063946}
-  startingPoint: {x: 0, y: 0.12, z: 4.4}
+  _animator: {fileID: 0}
 --- !u!1 &4612480462426874819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1021,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1360991219368177298, guid: 9ba642b5a3d1f1f449a9e19903816648, type: 3}
+  - {fileID: 2100000, guid: 303a22c30b36d64448b663a6dbc67107, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

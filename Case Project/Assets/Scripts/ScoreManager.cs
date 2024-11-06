@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int coinCount;
+    public int coinCount, deadCount;
     UIManager _uiManager;
     GameManager _gameManager;
 
@@ -16,11 +16,17 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         coinCount = 0;
+        deadCount = 0;
     }
     public void UpdateStarScore()
     {
         _uiManager.coinCountText.text = coinCount.ToString();
     }
 
+    public void UpdateDeadScore()
+    {
+        deadCount++;
+        _uiManager.deadCounText.text = "Dead Meter : " + deadCount.ToString();
+    }
 
 }
