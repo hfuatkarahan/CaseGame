@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - RotatorStick
   - Restart Point
+  - Boy
   layers:
   - Default
   - TransparentFX

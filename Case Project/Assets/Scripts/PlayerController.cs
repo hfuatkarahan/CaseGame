@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private FixedJoystick _joystick;
     [SerializeField] private Animator _animator;
-    [SerializeField] private float speed;
+    public float speed = 5f;
 
     void AnimPlay(string animName)
     {
